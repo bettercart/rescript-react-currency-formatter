@@ -1,0 +1,31 @@
+g_pkg_flg = -bs-package-name @bettercart/res-react-currency-formatter -bs-ns ReactCurrencyFormatter
+src_root_dir = /Users/danwetherald/Developer/OpenSource/@bettercart/res-react-currency-formatter
+bsc = /Users/danwetherald/.config/yarn/global/node_modules/bs-platform/darwin/bsc.exe
+bsdep = /Users/danwetherald/.config/yarn/global/node_modules/bs-platform/darwin/bsb_helper.exe
+warnings =  -warn-error +101
+bsc_flags = 
+ppx_flags = 
+g_dpkg_incls = 
+g_ns = -bs-ns ReactCurrencyFormatter
+g_lib_incls = -I . -I src -I /Users/danwetherald/Developer/OpenSource/@bettercart/res-react-currency-formatter/node_modules/reason-react/lib/ocaml
+rule build_ast_from_re
+  command = $bsc  $warnings -bs-jsx 3 $bsc_flags -o $out -bs-syntax-only -bs-binary-ast $in
+
+build  src/Currency.resast : build_ast_from_re $src_root_dir/src/Currency.res
+rule mk_deps
+  command = $bsdep -hash 25d74d3affb8b5f91974c296c3d32928 $g_ns $in
+  restat = 1
+
+build  src/Currency.d : mk_deps src/Currency.resast
+rule ml_cmj_cmi
+  command = $bsc $g_pkg_flg $g_lib_incls $warnings $bsc_flags -o $out $in
+  dyndep = $in_e.d
+  restat = 1
+
+build  src/Currency-ReactCurrencyFormatter.cmj |  src/Currency-ReactCurrencyFormatter.cmi ../../src/Currency.bs.js : ml_cmj_cmi src/Currency.resast ||  src/Currency.d
+  g_pkg_flg = $g_pkg_flg  -bs-package-output commonjs:src:.bs.js
+rule build_package
+  command = $bsc -w -49 -color always -no-alias-deps  $in
+  restat = 1
+
+build  ReactCurrencyFormatter.cmi : build_package ReactCurrencyFormatter.mlmap
