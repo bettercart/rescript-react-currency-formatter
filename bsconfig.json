@@ -1,5 +1,5 @@
 {
-  "name": "@bettercart/res-react-currency-formatter",
+  "name": "@bettercart/rescript-react-currency-formatter",
   "namespace": "ReactCurrencyFormatter",
   "reason": {
     "react-jsx": 3

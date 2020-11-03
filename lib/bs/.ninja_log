@@ -1,7 +1,0 @@
-# ninja log v6
-1	19	1603173261872656139	ReactCurrencyFormatter.cmi	e0c7596b2d33d841
-0	20	1603173261873995125	src/Currency.resast	ba3fd193eae431e5
-20	27	1603173261883452840	src/Currency.d	5282f78cc680ae17
-27	49	1603173261903256637	src/Currency-ReactCurrencyFormatter.cmj	dd2f9c4989144321
-27	49	1603173261903256637	src/Currency-ReactCurrencyFormatter.cmi	dd2f9c4989144321
-27	49	1603173261903256637	../../src/Currency.bs.js	dd2f9c4989144321

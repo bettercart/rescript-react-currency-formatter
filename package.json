@@ -1,5 +1,6 @@
 {
-  "name": "@bettercart/res-react-currency-formatter",
+  "name": "@bettercart/rescript-react-currency-formatter",
+  "respository": "https://github.com/bettercart/rescript-react-currency-formatter.git",
   "homepage": "https://www.getbettercart.com",
   "author": "Better Cart Inc",
   "version": "0.0.1",
@@ -14,9 +15,9 @@
   "keywords": [
     "BuckleScript",
     "Rescript",
+    "Currency",
     "React Currency Formatter"
   ],
-  "optionalDependencies": {},
   "dependencies": {
     "react-currency-formatter": "^1.1.0"
   },
