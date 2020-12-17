@@ -3,7 +3,7 @@
   "respository": "https://github.com/bettercart/rescript-react-currency-formatter.git",
   "homepage": "https://www.getbettercart.com",
   "author": "Better Cart Inc",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "scripts": {
     "copy-git-hooks": "if [ -e ./hooks ] && [ -e ./.git/hooks ]; then cp -v ./hooks/* ./.git/hooks; fi",
@@ -13,6 +13,7 @@
     "re:watch": "bsb -make-world -w"
   },
   "keywords": [
+    "rescript",
     "BuckleScript",
     "Rescript",
     "Currency",
@@ -23,7 +24,7 @@
   },
   "peerDependencies": {
     "fs": "^0.0.1-security",
-    "bs-platform": "^8.3.1",
+    "bs-platform": "^8.4.2",
     "lint-staged": "^10.4.0",
     "prettier": "^2.1.2",
     "reason-react": "^0.9.1"
