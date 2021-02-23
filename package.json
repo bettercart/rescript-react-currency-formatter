@@ -3,11 +3,9 @@
   "respository": "https://github.com/bettercart/rescript-react-currency-formatter.git",
   "homepage": "https://www.getbettercart.com",
   "author": "Better Cart Inc",
-  "version": "0.0.2",
+  "version": "0.2.0",
   "license": "MIT",
   "scripts": {
-    "copy-git-hooks": "if [ -e ./hooks ] && [ -e ./.git/hooks ]; then cp -v ./hooks/* ./.git/hooks; fi",
-    "prepare": "if [ -z \"$CI\" ]; then yarn copy-git-hooks; fi",
     "re:clean": "bsb -clean-world",
     "re:build": "bsb -make-world",
     "re:watch": "bsb -make-world -w"
@@ -23,21 +21,11 @@
     "react-currency-formatter": "^1.1.0"
   },
   "peerDependencies": {
-    "fs": "^0.0.1-security",
-    "bs-platform": "^8.4.2",
-    "lint-staged": "^10.4.0",
-    "prettier": "^2.1.2",
-    "reason-react": "^0.9.1"
+    "bs-platform": "^9.0.1",
+    "@rescript/react": "^0.10.1"
   },
-  "lint-staged": {
-    "*.js": [
-      "prettier --write"
-    ],
-    "*.{md,scss,css,json}": [
-      "prettier --write"
-    ],
-    "*.{re,rei}": [
-      "bsrefmt --in-place"
-    ]
+  "devDependencies": {
+    "bs-platform": "^9.0.1",
+    "@rescript/react": "^0.10.1"
   }
 }
